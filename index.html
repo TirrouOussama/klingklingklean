@@ -1,0 +1,1114 @@
+
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>KlingKlingKlean Carpet Cleaning</title>
+<meta name="description" content="Premium carpet, upholstery, hard floor and commercial cleaning services with transparent pricing.">
+
+<style>
+:root {
+    --blue: #1769ff;
+    --blue-dark: #0b3a91;
+    --cyan: #42d8ff;
+    --ink: #102448;
+    --muted: #647794;
+    --white: #ffffff;
+    --border: rgba(123, 170, 238, .25);
+    --shadow: 0 18px 55px rgba(30, 91, 176, .10);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, "Segoe UI", Arial, sans-serif;
+    color: var(--ink);
+    background: #edf4ff;
+    overflow-x: hidden;
+}
+
+/* ANIMATED WEBSITE BACKGROUND */
+
+.background-effects {
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    overflow: hidden;
+    pointer-events: none;
+    background:
+        radial-gradient(ellipse at 10% 15%, #d2e4ff 0, transparent 42%),
+        radial-gradient(ellipse at 90% 40%, #d7f8ff 0, transparent 38%),
+        radial-gradient(ellipse at 45% 90%, #d8ddff 0, transparent 40%),
+        linear-gradient(145deg, #f8fbff, #edf4ff 55%, #f8fbff);
+}
+
+.orb {
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    filter: blur(75px);
+    opacity: .4;
+    animation: floatOrb 16s ease-in-out infinite alternate;
+}
+
+.orb-one {
+    background: #79b3ff;
+    top: 8%;
+    left: -180px;
+}
+
+.orb-two {
+    background: #80e8f5;
+    top: 40%;
+    right: -200px;
+    animation-delay: -6s;
+}
+
+.orb-three {
+    background: #a8a4ff;
+    bottom: -180px;
+    left: 35%;
+    animation-delay: -10s;
+}
+
+@keyframes floatOrb {
+    from { transform: translate3d(0, 0, 0) scale(1); }
+    to   { transform: translate3d(70px, -45px, 0) scale(1.18); }
+}
+
+/* HERO */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    padding: 78px 24px 90px;
+    color: white;
+    background:
+        radial-gradient(ellipse at 85% 20%, #287eea 0, transparent 38%),
+        linear-gradient(125deg, #061936, #0d3474 55%, #1266b9);
+    border-radius: 0 0 38px 38px;
+}
+
+.hero::before,
+.hero::after {
+    content: "";
+    position: absolute;
+    border: 1px solid rgba(255,255,255,.10);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.hero::before {
+    width: 600px;
+    height: 600px;
+    top: -370px;
+    right: -100px;
+}
+
+.hero::after {
+    width: 430px;
+    height: 430px;
+    bottom: -360px;
+    left: 10%;
+}
+
+.hero-content {
+    max-width: 1120px;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+    animation: fadeUp .9s ease both;
+}
+
+
+
+
+
+.hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+.hero-video {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero::before,
+.hero::after {
+    z-index: -1;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(
+        90deg,
+        rgba(4, 19, 44, .94),
+        rgba(7, 37, 78, .76) 52%,
+        rgba(5, 24, 53, .28)
+    );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: #9be9ff;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.eyebrow::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: var(--cyan);
+    border-radius: 50%;
+    box-shadow: 0 0 15px var(--cyan);
+}
+
+.hero h1 {
+    max-width: 750px;
+    font-size: clamp(38px, 6vw, 68px);
+    line-height: 1.04;
+    letter-spacing: -2.5px;
+    margin: 24px 0 20px;
+}
+
+.hero h1 span {
+    color: #61d5ff;
+    display: block;
+}
+
+.hero p {
+    max-width: 620px;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #d4e5ff;
+}
+
+.hero-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.hero-badges span {
+    padding: 10px 15px;
+    border: 1px solid #ffffff24;
+    background: #ffffff0d;
+    border-radius: 30px;
+    font-size: 12px;
+    backdrop-filter: blur(10px);
+}
+
+/* MAIN LAYOUT */
+
+.container {
+    width: min(1160px, calc(100% - 36px));
+    margin: 38px auto 70px;
+}
+
+.section-heading {
+    margin: 0 0 28px;
+    text-align: center;
+    animation: fadeUp .8s ease both;
+}
+
+.section-heading h2 {
+    margin: 0 0 8px;
+    font-size: clamp(25px, 4vw, 35px);
+    letter-spacing: -1px;
+}
+
+.section-heading p {
+    color: var(--muted);
+    margin: 0;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+/* PREMIUM CARDS */
+
+.card {
+    min-width: 0;
+    position: relative;
+    overflow: hidden;
+    padding: 26px;
+    border: 1px solid rgba(255,255,255,.95);
+    border-radius: 23px;
+    background: rgba(255,255,255,.83);
+    backdrop-filter: blur(18px);
+    box-shadow: var(--shadow);
+    animation: fadeUp .75s ease both;
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        border-color .35s ease;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto;
+    height: 3px;
+    background: linear-gradient(90deg, #1769ff, #43d9ff, #a78bfa);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .45s ease;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 25px 65px rgba(28, 87, 170, .16);
+    border-color: #a9d1ff;
+}
+
+.card:hover::before {
+    transform: scaleX(1);
+}
+
+.card:nth-child(1) { animation-delay: .08s; }
+.card:nth-child(2) { animation-delay: .16s; }
+.card:nth-child(3) { animation-delay: .24s; }
+.card:nth-child(4) { animation-delay: .32s; }
+
+.card-wide {
+    grid-column: 1 / -1;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 23px;
+}
+
+.icon-box {
+    display: grid;
+    place-items: center;
+    flex: 0 0 52px;
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+    color: white;
+    font-size: 24px;
+    background: linear-gradient(145deg, #438aff, #1552db);
+    box-shadow: 0 8px 22px #1769ff35;
+    transition: transform .4s ease;
+}
+
+.card:hover .icon-box {
+    transform: rotate(-7deg) scale(1.08);
+}
+
+.card-header h3 {
+    margin: 0 0 5px;
+    font-size: 19px;
+    letter-spacing: -.4px;
+}
+
+.card-header p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--muted);
+}
+
+/* ANIMATED TABLES */
+
+.table-wrap {
+    overflow-x: auto;
+    border-radius: 13px;
+    border: 1px solid #e5edf8;
+    background: white;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    text-align: left;
+}
+
+thead th {
+    padding: 14px 13px;
+    background: linear-gradient(110deg, #edf4ff, #f3f8ff);
+    color: #25436e;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .65px;
+    white-space: nowrap;
+}
+
+tbody td {
+    padding: 14px 13px;
+    font-size: 13px;
+    border-top: 1px solid #edf2fa;
+    transition: background .25s ease;
+}
+
+tbody tr {
+    animation: rowReveal .6s ease both;
+}
+
+tbody tr:nth-child(1) { animation-delay: .10s; }
+tbody tr:nth-child(2) { animation-delay: .17s; }
+tbody tr:nth-child(3) { animation-delay: .24s; }
+tbody tr:nth-child(4) { animation-delay: .31s; }
+tbody tr:nth-child(5) { animation-delay: .38s; }
+tbody tr:nth-child(6) { animation-delay: .45s; }
+tbody tr:nth-child(7) { animation-delay: .52s; }
+
+tbody tr:hover td {
+    background: #f0f6ff;
+}
+
+tbody tr:hover td:first-child {
+    box-shadow: inset 3px 0 0 var(--blue);
+}
+
+td:first-child {
+    color: #243957;
+    font-weight: 600;
+}
+
+td small {
+    display: inline-block;
+    margin-top: 3px;
+    color: #8090a7;
+    font-size: 11px;
+    font-weight: 400;
+}
+
+.price {
+    color: #135be1;
+    font-weight: 800;
+    white-space: nowrap;
+    transition: color .2s ease;
+}
+
+tbody tr:hover .price {
+    color: #008fd5;
+}
+
+.price-featured {
+    display: inline-block;
+    padding: 4px 9px;
+    border-radius: 7px;
+    background: #eaf2ff;
+}
+
+/* NOTES AND CALLOUTS */
+
+.note {
+    display: flex;
+    gap: 12px;
+    margin-top: 17px;
+    padding: 16px;
+    border-radius: 12px;
+    color: #385477;
+    background: linear-gradient(110deg, #edf5ff, #f1faff);
+    border: 1px solid #dfedff;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.note-icon {
+    flex: 0 0 auto;
+    color: var(--blue);
+    font-size: 17px;
+}
+
+.note strong {
+    color: #1248ac;
+}
+
+.commercial-layout {
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    gap: 22px;
+    align-items: stretch;
+}
+
+.commercial-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 23px;
+    border-radius: 15px;
+    background:
+        radial-gradient(circle at 100% 0%, #d2ebff, transparent 50%),
+        linear-gradient(135deg, #edf5ff, #f7fbff);
+    border: 1px solid #dceaff;
+}
+
+.commercial-panel h4 {
+    margin: 0 0 10px;
+    font-size: 15px;
+}
+
+.commercial-panel p {
+    margin: 0 0 15px;
+    color: #506886;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.commercial-panel p:last-child {
+    margin-bottom: 0;
+}
+
+/* FOOTER */
+
+.footer {
+    position: relative;
+    overflow: hidden;
+    padding: 48px 24px 30px;
+    color: white;
+    background:
+        radial-gradient(ellipse at 80% 0%, #164b99, transparent 45%),
+        linear-gradient(130deg, #06152e, #0b2854);
+    border-radius: 35px 35px 0 0;
+}
+
+.footer-inner {
+    width: min(1100px, 100%);
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.brand {
+    font-size: 19px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.brand span {
+    color: #59d4ff;
+}
+
+.brand-subtitle {
+    margin-top: 7px;
+    font-size: 12px;
+    color: #a9c4e8;
+}
+
+.quote-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 23px;
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 800;
+    border-radius: 40px;
+    background: linear-gradient(110deg, #2477ff, #12a6ed);
+    box-shadow: 0 8px 25px #0878ff35;
+    transition: transform .25s, box-shadow .25s;
+}
+
+.quote-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 13px 35px #0878ff65;
+}
+
+.footer-bottom {
+    width: min(1100px, 100%);
+    margin: 35px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid #ffffff20;
+    color: #a9c4e8;
+    text-align: center;
+    font-size: 12px;
+}
+
+
+/* PREMIUM FOOTER CONTACT BUTTONS */
+
+.footer-contact {
+    margin-top: 18px;
+}
+
+.footer-contact-label {
+    color: #a9c4e8;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.footer-phone {
+    display: inline-block;
+    color: #ffffff;
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: .5px;
+    text-decoration: none;
+    transition: color .25s ease;
+}
+
+.footer-phone:hover {
+    color: #59d4ff;
+}
+
+.footer-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.contact-button {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 20px;
+    min-height: 52px;
+    border-radius: 15px;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 800;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, .18);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .15);
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        filter .3s ease;
+}
+
+.whatsapp-button {
+    background: linear-gradient(120deg, #19b866, #0b9550);
+}
+
+.call-button {
+    background: linear-gradient(120deg, #2477ff, #12a6ed);
+}
+
+.contact-button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 32px rgba(0, 0, 0, .25);
+    filter: brightness(1.08);
+}
+
+.contact-button:active {
+    transform: translateY(-1px);
+}
+
+.contact-icon {
+    font-size: 19px;
+}
+
+.button-arrow {
+    margin-left: 3px;
+    font-size: 16px;
+    transition: transform .25s ease;
+}
+
+.contact-button:hover .button-arrow {
+    transform: translateX(3px);
+}
+
+@media (max-width: 600px) {
+    .footer-actions {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .contact-button {
+        width: 100%;
+    }
+
+    .footer-phone {
+        font-size: 19px;
+    }
+}
+
+
+
+
+/* MOTION */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes rowReveal {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 820px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card-wide {
+        grid-column: auto;
+    }
+
+    .commercial-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 60px 22px 70px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: calc(100% - 22px);
+        margin-top: 22px;
+    }
+
+    .card {
+        padding: 18px 12px;
+        border-radius: 18px;
+    }
+
+    .card-header {
+        gap: 11px;
+    }
+
+    .icon-box {
+        flex-basis: 43px;
+        width: 43px;
+        height: 43px;
+        font-size: 20px;
+    }
+
+    .card-header h3 {
+        font-size: 16px;
+    }
+
+    .card-header p {
+        font-size: 12px;
+    }
+
+    thead th {
+        font-size: 10px;
+        padding: 12px 9px;
+    }
+
+    tbody td {
+        font-size: 12px;
+        padding: 12px 9px;
+    }
+
+    .hero h1 {
+        letter-spacing: -1.5px;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+@media print {
+    .background-effects {
+        display: none;
+    }
+
+    .hero, .footer {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
+
+    .card {
+        animation: none;
+        box-shadow: none;
+        break-inside: avoid;
+    }
+
+    .pricing-grid {
+        display: block;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="background-effects" aria-hidden="true">
+    <div class="orb orb-one"></div>
+    <div class="orb orb-two"></div>
+    <div class="orb orb-three"></div>
+</div>
+
+<header class="hero">
+<video class="hero-video" autoplay muted loop playsinline
+       poster="carpet-hero.jpg">
+    <source src="carpet-cleaning.mp4" type="video/mp4">
+</video>
+<div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <div class="eyebrow">Cleaner spaces · Healthier lives</div>
+
+        <h1>
+            Our Cleaning
+            <span>Price List</span>
+        </h1>
+
+        <p>
+            Professional, reliable and affordable cleaning services
+            for homes, businesses, landlords and property managers.
+            Quality results, transparent prices and exceptional care.
+        </p>
+
+        <div class="hero-badges">
+            <span>✦ Professional equipment</span>
+            <span>✦ Reliable service</span>
+            <span>✦ Transparent pricing</span>
+            <span>✦ Flexible appointments</span>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+
+    <div class="section-heading">
+        <h2>Our Services &amp; Prices</h2>
+        <p>Choose the service you need. Know the price before we begin.</p>
+    </div>
+
+    <div class="pricing-grid">
+
+        <!-- CARPET CLEANING -->
+        <section class="card">
+            <div class="card-header">
+                <div class="icon-box">⌂</div>
+                <div>
+                    <h3>Residential Carpet Cleaning</h3>
+                    <p>Professional carpet cleaning by room size and quantity.</p>
+                </div>
+            </div>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Room / Area</th>
+                            <th>1 room</th>
+                            <th>2–3 rooms<br>(each)</th>
+                            <th>4+ rooms<br>(each)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Small room<small>Up to approx. 3 × 3 m</small></td>
+                            <td class="price">£35</td>
+                            <td class="price">£30</td>
+                            <td class="price">£25</td>
+                        </tr>
+                        <tr>
+                            <td>Large room<small>Up to approx. 5 × 5 m</small></td>
+                            <td class="price">£55</td>
+                            <td class="price">£48</td>
+                            <td class="price">£42</td>
+                        </tr>
+                        <tr>
+                            <td>Hallway / landing</td>
+                            <td class="price">£25</td>
+                            <td class="price">£22</td>
+                            <td class="price">£20</td>
+                        </tr>
+                        <tr>
+                            <td>Stairs<small>Per flight</small></td>
+                            <td class="price">£30</td>
+                            <td class="price">£28</td>
+                            <td class="price">£25</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="note">
+                <span class="note-icon">●</span>
+                <div>
+                    <strong>Minimum call-out: £40</strong><br>
+                    Furniture should be cleared before cleaning.
+                    Furniture moving is available on request.
+                </div>
+            </div>
+        </section>
+
+        <!-- UPHOLSTERY -->
+        <section class="card">
+            <div class="card-header">
+                <div class="icon-box">▰</div>
+                <div>
+                    <h3>Residential Upholstery Cleaning</h3>
+                    <p>Refresh sofas, chairs and mattresses.</p>
+                </div>
+            </div>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Dining chair (per seat)</td><td class="price">£10</td></tr>
+                        <tr><td>Armchair</td><td class="price">£25</td></tr>
+                        <tr><td>2-seater sofa</td><td class="price">£40</td></tr>
+                        <tr><td>3-seater sofa</td><td class="price">£55</td></tr>
+                        <tr><td>Corner / large sofa</td><td class="price">From £70</td></tr>
+                        <tr><td>Single mattress</td><td class="price">£25</td></tr>
+                        <tr><td>Double mattress or larger</td><td class="price">£35</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- HARD FLOORS -->
+        <section class="card">
+            <div class="card-header">
+                <div class="icon-box">◇</div>
+                <div>
+                    <h3>Hard Floors &amp; Tiles</h3>
+                    <p>Cleaning for tiled surfaces and hard flooring.</p>
+                </div>
+            </div>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Service</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Tile &amp; grout cleaning<small>Bathroom / kitchen</small></td>
+                            <td class="price">From £45</td>
+                        </tr>
+                        <tr>
+                            <td>Hard floor foam cleaning<small>Per m²</small></td>
+                            <td class="price">£3.50</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="note">
+                <span class="note-icon">●</span>
+                <div><strong>Minimum call-out: £40</strong></div>
+            </div>
+        </section>
+
+        <!-- ADD-ONS -->
+        <section class="card">
+            <div class="card-header">
+                <div class="icon-box">✧</div>
+                <div>
+                    <h3>Stain, Odour &amp; Protection</h3>
+                    <p>Optional treatments for enhanced results.</p>
+                </div>
+            </div>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Treatment</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Pet urine / odour treatment<small>Per room</small></td>
+                            <td class="price">£20</td>
+                        </tr>
+                        <tr>
+                            <td>Heavy staining / deep soiling<small>Per room</small></td>
+                            <td class="price">£15</td>
+                        </tr>
+                        <tr>
+                            <td>Stain guard protection<small>Per room</small></td>
+                            <td class="price">£12</td>
+                        </tr>
+                        <tr>
+                            <td>Deodorising spray<small>All rooms treated in one visit</small></td>
+                            <td class="price">£10</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="note">
+                <span class="note-icon">●</span>
+                <div>Add-ons are charged in addition to the relevant room or item rate.</div>
+            </div>
+        </section>
+
+        <!-- COMMERCIAL -->
+        <section class="card card-wide">
+            <div class="card-header">
+                <div class="icon-box">▦</div>
+                <div>
+                    <h3>Commercial &amp; Landlord Cleaning</h3>
+                    <p>Flexible cleaning for offices, retail spaces and rental properties.</p>
+                </div>
+            </div>
+
+            <div class="commercial-layout">
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Service</th>
+                                <th>Rate</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Carpeted office / retail space</td>
+                                <td class="price">£3.00 per m²</td>
+                            </tr>
+                            <tr>
+                                <td>End-of-tenancy carpet cleaning<small>Per property</small></td>
+                                <td class="price">From £80</td>
+                            </tr>
+                            <tr>
+                                <td>Communal areas / stairwells</td>
+                                <td class="price">£2.50 per m²</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="commercial-panel">
+                    <h4>Commercial Service Benefits</h4>
+                    <p><strong>Minimum commercial call-out:</strong> £65</p>
+                    <p>Free site visits for commercial properties over 200 m².</p>
+                    <p>Discounted rates available for regular cleaning contracts.</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</main>
+
+
+<footer class="footer">
+    <div class="footer-inner">
+        <div>
+            <div class="brand">✦ CLEANING <span>SERVICES</span></div>
+            <div class="brand-subtitle">Quality · Care · Trust</div>
+
+            <div class="footer-contact">
+                <div class="footer-contact-label">
+                    WhatsApp or phone call
+                </div>
+                <a class="footer-phone" href="tel:07307714685">
+                    07307714685
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-actions">
+            <a
+                class="contact-button whatsapp-button"
+                href="https://wa.me/447307714685"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Message us on WhatsApp"
+            >
+                <span class="contact-icon">✉</span>
+                <span>Message on WhatsApp</span>
+                <span class="button-arrow">↗</span>
+            </a>
+
+            <a
+                class="contact-button call-button"
+                href="tel:07307714685"
+                aria-label="Call us by phone"
+            >
+                <span class="contact-icon">☎</span>
+                <span>Call Us Now</span>
+                <span class="button-arrow">→</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        Professional cleaning services · Your clean space is our priority.
+    </div>
+</footer>
+
+
+</body>
+</html>
